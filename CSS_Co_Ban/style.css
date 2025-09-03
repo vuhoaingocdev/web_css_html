@@ -1,0 +1,9 @@
+/* Định nghĩa các biến */
+
+:root {
+  --text-color: red;
+}
+
+h1 {
+  color: var(--text-color);
+}

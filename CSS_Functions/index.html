@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <!-- Phần đầu-->
+  <head>
+    <title>CSS Functions</title>
+    <meta charset="utf-8" />
+    <!-- css kiểu external -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .h1-pseudo:hover {
+        color: blue;
+        cursor: pointer;
+      }
+
+      .box {
+        width: 100%;
+        height: 120px;
+        background: rgb(167, 91, 91);
+        position: fixed;
+        top: 0;
+      }
+
+      .css-function {
+        margin-top: 200px;
+      }
+
+      .box::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+      }
+      .box::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+      }
+
+      h2::selection {
+        color: red;
+        background-color: #453c3c;
+      }
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        background-color: #ccc;
+      }
+      .div-absolute {
+        width: 100%;
+        height: 120px;
+        background: #333;
+        position: relative;
+      }
+      .div-absolute-child {
+        width: 50px;
+        height: 50px;
+        background: red;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <!-- Phần thân -->
+  <body>
+    <div class="box"></div>
+    <!-- css functions -->
+    <div class="css-function">
+      <h2>1.css funtion</h2>
+      <ul>
+        <li>var()</li>
+        <li>linear-gradient()</li>
+        <li>rgba()</li>
+        <li>rgb() -> hàm lấy màu sắc</li>
+        <li>calc() -> hàm tính toán: calc(120px + 50px * 2)</li>
+        <li>attr()</li>
+      </ul>
+    </div>
+
+    <div>
+      <!-- CSS Pseudo classes: Lớp giả -->
+      <h2 class="h1-pseudo">CSS Pseudo classes: Lớp giả</h2>
+      <ul>
+        <li>:root</li>
+        <li>:hover</li>
+        <li>:active</li>
+        <li>:first-child</li>
+        <li>:last-child</li>
+      </ul>
+    </div>
+
+    <!-- CSS Pseudo element: Phần tử giả -->
+    <div>
+      <h2 class="h1-pseudo">CSS Pseudo classes: Lớp giả</h2>
+      <ul>
+        <li>::before</li>
+        <li>::after</li>
+        <li>::first-letter -> css cho ký tự đầu tiên</li>
+        <li>::first-line -> css cho dòng đầu tiên</li>
+        <li>::selection -> phần tử cụ thể bị ảnh hưởng (bôi đen)</li>
+      </ul>
+    </div>
+    <!-- Thuộc tính position -->
+    <div>
+      <h2 class="h1-pseudo">Thuộc tính Position</h2>
+      <!--  -->
+      <h3 class="relative">Relative</h3>
+      <!--  -->
+      <div class="div-absolute">
+        <div class="div-absolute-child"></div>
+      </div>
+      <ul>
+        <li>Relative: vị trí tương đối</li>
+        <li>
+          Absolute: vị trí tuyệt đối (Phụ thuộc vào thẻ cha gần nhất có thuộc
+          tính position)
+        </li>
+        <li>Fixed: vị trí phụ thuộc vào khung trình duyệt</li>
+        <li>Sticky: vị trí bám dính phụ thuộc vào khung trình duyệt</li>
+      </ul>
+    </div>
+  </body>
+</html>
